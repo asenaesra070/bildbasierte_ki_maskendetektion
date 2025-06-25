@@ -1,0 +1,10 @@
+Validerung(Test) Datensatz Metrics
+Mein Gerät: cpu
+Wo ist SimpleCNN im Gerät?  cpu
+Accuracy: 0.9207
+Precision: 0.9064
+Recall: 0.9383
+F1-Score: 0.9221
+Confusion Matrix:
+ [[1156  124]
+ [  79 1201]]

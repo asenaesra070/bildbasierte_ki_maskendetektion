@@ -1,0 +1,14 @@
+# Die PyTorch-Bibliothek ist der wichtigste Baustein für die Modellerstellung und das Training.
+torch
+# PyTorch-Plugin für visuelle Datenlade- und Datenerweiterungsvorgänge.
+torchvision
+# Die Standard-Python-Bibliothek für numerische Operationen.
+numpy
+# Es wird zur Visualisierung (meistens Plot x-axis und y-axis) verwendet.
+matplotlib
+# Für Leistungsmessungen (z. B. Genauigkeit, Präzision usw.).
+scikit-learn
+# Wird zum Lesen und Verarbeiten von Bildern verwendet (PIL.Image).
+pillow
+# Zeigt während des Trainings einen Fortschrittsbalken an.
+tqdm

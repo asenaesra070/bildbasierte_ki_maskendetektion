@@ -1,4 +1,4 @@
-import torch
+import torch                            # PyTorch: Tensor verarbeitung, Modell-Training, GPU-Unterstützung, Autograd
 import torch.nn as nn
 import torch.nn.functional as Fu
 
@@ -45,5 +45,4 @@ class SimpleCNN(nn.Module):
 
         return x
 
-torch.save(model.state_dict(), "...results/simple_cnn_model.pth")
 # ?ZEILE 44 Bei diesen Zahlen handelt es sich normalerweise um Logits, die dann mit Softmax wie folgt interpretiert werden: „Wie hoch ist die Wahrscheinlichkeit, dass dieses Bild maskiert ist?“

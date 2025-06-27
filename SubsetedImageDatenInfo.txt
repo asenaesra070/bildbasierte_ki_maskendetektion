@@ -1,0 +1,10 @@
+Train batch size: 64
+Validation batch size: 64
+Train dataset size: 2048
+Validation dataset size: 512
+Korrigierter class_dict: {'with_mask': 1, 'without_mask': 0}
+Label Batch (after flip): tensor([0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
+        0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1,
+        0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0])
+
+Process finished with exit code 0

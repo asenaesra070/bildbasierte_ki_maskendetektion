@@ -1,0 +1,14 @@
+Mein Gerät: cpu
+C:\Users\guler\OneDrive - Hochschule Düsseldorf\Desktop\BildBasierteKI\bildbasierte_ki_maskendetektion\.venv\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\guler\OneDrive - Hochschule Düsseldorf\Desktop\BildBasierteKI\bildbasierte_ki_maskendetektion\.venv\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Wo ist ResNet50 - Modell im Gerät? cpu
+Accuracy: 99.02%
+Precision: 100.00%
+Recall: 98.05%
+F1-Score: 99.01%
+Confusion Matrix:
+ [[256   0]
+ [  5 251]]
+Confusion Matrix wurde gespeichert : ../results/confusion_matrix_resnet50.pt

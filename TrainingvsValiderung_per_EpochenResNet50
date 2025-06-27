@@ -1,0 +1,31 @@
+Mein Gerät: cpu
+C:\Users\guler\OneDrive - Hochschule Düsseldorf\Desktop\BildBasierteKI\bildbasierte_ki_maskendetektion\.venv\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\guler\OneDrive - Hochschule Düsseldorf\Desktop\BildBasierteKI\bildbasierte_ki_maskendetektion\.venv\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Wo ist ResNet50 - Modell im Gerät? cpu
+Training started für ResNet50 Transfer Modell...
+Epoch 1/10 | Loss: 12.8817 | Accuracy: 0.7803 | Precision: 0.9271 | Recall: 0.6084 | F1: 0.7347
+Validation - Loss: 1.4855 | Accuracy: 0.9531 | Precision: 1.0000 | Recall: 0.9062 | F1: 0.9508
+Epoch 2/10 | Loss: 4.7698 | Accuracy: 0.9512 | Precision: 0.9936 | Recall: 0.9082 | F1: 0.9490
+Validation - Loss: 0.8126 | Accuracy: 0.9766 | Precision: 0.9919 | Recall: 0.9609 | F1: 0.9762
+Epoch 3/10 | Loss: 3.7973 | Accuracy: 0.9565 | Precision: 0.9825 | Recall: 0.9297 | F1: 0.9553
+Validation - Loss: 0.6854 | Accuracy: 0.9688 | Precision: 0.9918 | Recall: 0.9453 | F1: 0.9680
+Epoch 4/10 | Loss: 2.4110 | Accuracy: 0.9800 | Precision: 0.9920 | Recall: 0.9678 | F1: 0.9797
+Validation - Loss: 0.6309 | Accuracy: 0.9629 | Precision: 0.9917 | Recall: 0.9336 | F1: 0.9618
+Epoch 5/10 | Loss: 2.8061 | Accuracy: 0.9634 | Precision: 0.9857 | Recall: 0.9404 | F1: 0.9625
+Validation - Loss: 0.4803 | Accuracy: 0.9824 | Precision: 0.9881 | Recall: 0.9766 | F1: 0.9823
+Epoch 6/10 | Loss: 1.8030 | Accuracy: 0.9805 | Precision: 0.9950 | Recall: 0.9658 | F1: 0.9802
+Validation - Loss: 0.4317 | Accuracy: 0.9785 | Precision: 0.9920 | Recall: 0.9648 | F1: 0.9782
+Epoch 7/10 | Loss: 1.6415 | Accuracy: 0.9844 | Precision: 0.9980 | Recall: 0.9707 | F1: 0.9842
+Validation - Loss: 0.4141 | Accuracy: 0.9766 | Precision: 0.9919 | Recall: 0.9609 | F1: 0.9762
+Epoch 8/10 | Loss: 2.1287 | Accuracy: 0.9727 | Precision: 0.9869 | Recall: 0.9580 | F1: 0.9722
+Validation - Loss: 0.4001 | Accuracy: 0.9863 | Precision: 0.9882 | Recall: 0.9844 | F1: 0.9863
+Epoch 9/10 | Loss: 1.4869 | Accuracy: 0.9849 | Precision: 0.9980 | Recall: 0.9717 | F1: 0.9847
+Validation - Loss: 0.3422 | Accuracy: 0.9805 | Precision: 0.9920 | Recall: 0.9688 | F1: 0.9802
+Epoch 10/10 | Loss: 1.4467 | Accuracy: 0.9854 | Precision: 0.9940 | Recall: 0.9766 | F1: 0.9852
+Validation - Loss: 0.3404 | Accuracy: 0.9805 | Precision: 0.9920 | Recall: 0.9688 | F1: 0.9802
+ResNet50 Modell gespeichert: results/resnet50_model.pth
+Durchschnittliche Training Accuracy: 0.95390625
+Durchschnittliche Validation Accuracy: 0.974609375
+Trainings und Validierungsmesswerte gespeichert: results/resnet50_metrics_lists.pt

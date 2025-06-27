@@ -18,7 +18,6 @@ data_dir/
     ├── with_mask/
     └── without_mask/
 """
-
 def get_data_loader_RWMFD(data_dir, batch_size = 64, val_ratio=0.2):
     # Definiert Transformationen für die Bilder: Größe anpassen und in Tensor konvertieren
     transform = transforms.Compose([
@@ -49,43 +48,58 @@ def get_data_loader_RWMFD(data_dir, batch_size = 64, val_ratio=0.2):
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
     return train_loader, val_loader, class_dict
-def get_balanced_subset_loader_RWMFD(data_dir, batch_size=64, subset_size_per_class=1280):
+
+def get_balanced_subset_loader_RWMFD(data_dir, batch_size=64, subset_size_per_class=1280, val_ratio=0.2):
     """
-    Erstellt einen ausgewogenen (balanced) Subset-Dataloader aus dem RWMFD-Datensatz.
-    Nimmt z.B. 1280 Bilder aus jeder Klasse ('with_mask', 'without_mask') → insgesamt 2560 Bilder.
-    Das beschleunigt das Training & sichert faire Klassifikation.
+    Gibt zwei ausgewogene DataLoader zurück (Train + Validation) mit jeweils subset_size_per_class Bildern pro Klasse.
+    Diese Funktion ist besonders nützlich, wenn das gesamte Dataset zu groß ist oder die Klassen unausgeglichen sind.
     """
 
+    # Transformation: Größe anpassen + in Tensor umwandeln
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
     ])
 
+    # Bilder mit Labels laden (Klassenname = Ordnername)
     dataset = datasets.ImageFolder(root=data_dir, transform=transform)
     class_to_idx = dataset.class_to_idx
 
-    # Labels extrahieren
+    # Labels extrahieren (nur die Klasse: 0 oder 1)
     targets = [sample[1] for sample in dataset.samples]
 
-    # Für jede Klasse die passenden Indizes finden
+    # Für jede Klasse die gewünschten Anzahl an Indizes (Bildern) sammeln
     class_indices = {cls: [] for cls in set(targets)}
     for idx, label in enumerate(targets):
         if len(class_indices[label]) < subset_size_per_class:
             class_indices[label].append(idx)
 
-    # Subset zusammenstellen
+    # Subset aus ausgewogenen Klassen zusammenstellen
     selected_indices = class_indices[0] + class_indices[1]
     subset = Subset(dataset, selected_indices)
 
-    # DataLoader erzeugen
-    loader = DataLoader(subset, batch_size=batch_size, shuffle=True)
+    # Stratified Split in Training und Validation (z.B. 80% / 20%)
+    train_indices, val_indices = train_test_split(
+        list(range(len(subset))),
+        test_size=val_ratio,
+        stratify=[targets[i] for i in selected_indices]
+    )
 
-    return loader, class_to_idx
+    # Trainings- und Validierungs-Subset erstellen
+    train_dataset = Subset(subset, train_indices)
+    val_dataset = Subset(subset, val_indices)
+
+    # DataLoader erzeugen
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+    return train_loader, val_loader, class_to_idx
+
 
 # --- Test (nur falls als Skript ausgeführt) ---
 #jede Zahl in diesem Tensor stellt die Klassenbezeichnung eines Fotos dar. ImagesLabel : 0 oder 1
 if __name__ == "__main__":
-    train_loader, val_loader, class_dict = get_data_loader_RWMFD(
+    train_loader, val_loader, class_dict = get_balanced_subset_loader_RWMFD(
         r"C:\Users\guler\OneDrive - Hochschule Düsseldorf\Desktop\BildBasierteKI\bildbasierte_ki_maskendetektion\data\RWMFD",
         batch_size=64
     )

@@ -1,0 +1,30 @@
+"C:\Users\guler\OneDrive - Hochschule Düsseldorf\Desktop\BildBasierteKI\bildbasierte_ki_maskendetektion\.venv\Scripts\python.exe" "C:\Users\guler\OneDrive - Hochschule Düsseldorf\Desktop\BildBasierteKI\bildbasierte_ki_maskendetektion\src\train_simple_cnn.py"
+Mein Gerät: cpu
+Wo ist SimpleCNN im Gerät? cpu
+Training started...
+Epoch 1/10 | Loss: 35.9378 | Accuracy: 0.5005 | Precision: 0.5025 | Recall: 0.0977 | F1: 0.1635
+Validation - Loss: 3.7106 | Accuracy: 0.5039 | Precision: 0.7500 | Recall: 0.0117 | F1: 0.0231
+Epoch 2/10 | Loss: 10.4267 | Accuracy: 0.7246 | Precision: 0.9528 | Recall: 0.4727 | F1: 0.6319
+Validation - Loss: 1.7552 | Accuracy: 0.8887 | Precision: 0.9901 | Recall: 0.7852 | F1: 0.8758
+Epoch 3/10 | Loss: 5.3608 | Accuracy: 0.9258 | Precision: 0.9698 | Recall: 0.8789 | F1: 0.9221
+Validation - Loss: 1.1766 | Accuracy: 0.9473 | Precision: 0.9490 | Recall: 0.9453 | F1: 0.9472
+Epoch 4/10 | Loss: 4.0321 | Accuracy: 0.9434 | Precision: 0.9779 | Recall: 0.9072 | F1: 0.9412
+Validation - Loss: 1.6728 | Accuracy: 0.9199 | Precision: 0.8799 | Recall: 0.9727 | F1: 0.9239
+Epoch 5/10 | Loss: 5.1037 | Accuracy: 0.9360 | Precision: 0.9656 | Recall: 0.9043 | F1: 0.9339
+Validation - Loss: 1.3648 | Accuracy: 0.9375 | Precision: 0.9058 | Recall: 0.9766 | F1: 0.9398
+Epoch 6/10 | Loss: 3.4546 | Accuracy: 0.9551 | Precision: 0.9784 | Recall: 0.9307 | F1: 0.9540
+Validation - Loss: 0.8393 | Accuracy: 0.9688 | Precision: 0.9762 | Recall: 0.9609 | F1: 0.9685
+Epoch 7/10 | Loss: 2.9590 | Accuracy: 0.9536 | Precision: 0.9823 | Recall: 0.9238 | F1: 0.9522
+Validation - Loss: 0.9160 | Accuracy: 0.9688 | Precision: 0.9724 | Recall: 0.9648 | F1: 0.9686
+Epoch 8/10 | Loss: 2.9706 | Accuracy: 0.9595 | Precision: 0.9856 | Recall: 0.9326 | F1: 0.9584
+Validation - Loss: 1.4683 | Accuracy: 0.9453 | Precision: 0.9161 | Recall: 0.9805 | F1: 0.9472
+Epoch 9/10 | Loss: 2.1701 | Accuracy: 0.9751 | Precision: 0.9939 | Recall: 0.9561 | F1: 0.9746
+Validation - Loss: 1.0432 | Accuracy: 0.9434 | Precision: 0.9710 | Recall: 0.9141 | F1: 0.9416
+Epoch 10/10 | Loss: 2.6345 | Accuracy: 0.9629 | Precision: 0.9887 | Recall: 0.9365 | F1: 0.9619
+Validation - Loss: 1.7721 | Accuracy: 0.9141 | Precision: 0.9173 | Recall: 0.9102 | F1: 0.9137
+Modell gespeichert: results/simple_cnn_model.pth
+Durchschnittliche Training Accuracy: 0.883642578125
+Durchschnittliche Validation Accuracy: 0.89375
+Trainings und Validierung metriken gespeichert: results/metrics_lists.pt
+
+Process finished with exit code 0

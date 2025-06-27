@@ -1,0 +1,35 @@
+Mein Gerät: cpu
+Wo ist SimpleCNN im Gerät?  cpu
+Accuracy: 0.9258
+Precision: 0.9504
+Recall: 0.8984
+F1-Score: 0.9237
+Confusion Matrix:
+ [[244  12]
+ [ 26 230]]
+
+
+ -----------------------------
+
+
+ Mein Gerät: cpu
+Wo ist SimpleCNN im Gerät?  cpu
+Accuracy: 0.9355
+Precision: 0.9705
+Recall: 1.0
+F1-Score: 0.9331
+Confusion Matrix:
+ [[249   7]
+ [ 26 230]]
+
+ --------------------------
+Mein Gerät: cpu
+Wo ist SimpleCNN im Gerät?  cpu
+Accuracy: 91.02%
+Precision: 92.00%
+Recall: 89.84%
+F1-Score: 90.91%
+Confusion Matrix:
+ [[236  20]
+ [ 26 230]]
+Confusion Matrix wurde gespeichert,results/confusion_matrix.pt
